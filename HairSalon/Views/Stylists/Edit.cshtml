@@ -14,4 +14,7 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name, new { @class="form-control" })
+  <input type="submit" value="Save" class="btn btn-primary" />
 }
+
+<h4>@Html.ActionLink("Back to stylists", "Index")</h4>
