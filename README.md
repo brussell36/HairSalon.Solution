@@ -1,4 +1,4 @@
-
+![Bright hair salon](https://andreashogue.com/images/slide-home-1.jpg)
 # Eau Claire's Salon
 
 #### C# Friday Independant Project, 07.31.2020
@@ -16,7 +16,7 @@ _This application will help a salon owner keep track of all the stylists who wor
 * Install [.Net Core](https://dotnet.microsoft.com/download/dotnet-core/2.2) 
 * To install the REPL dotnet script, run dotnet tool install -g dotnet-script in your terminal.
 * Run dotnet restore in terminal to get all dependencies.
-* Run the program with the command dotnet build.
+* Run the program with the command dotnet run.
 
 #### Additional Setup/Installation Notes:
 
