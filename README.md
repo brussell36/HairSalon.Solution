@@ -15,13 +15,31 @@ _This application will help a salon owner keep track of all the stylists who wor
 * Open the downloaded directory in a text editor of your choice. (VSCode, Atom, etc.)
 * Install [.Net Core](https://dotnet.microsoft.com/download/dotnet-core/2.2) 
 * To install the REPL dotnet script, run dotnet tool install -g dotnet-script in your terminal.
+* Run dotnet restore in terminal to get all dependencies.
 * Run the program with the command dotnet build.
 
 #### Additional Setup/Installation Notes:
 
-* You do not need to run a server to view this document.
+* You will need to have MySQL installed on your computer to start the database for this project. 
+* Once you have it installed open your terminal and run mysql -uroot -pepicodus. This will start the mysql server on your computer. 
+* With mysql running in your terminal copy/paste the code snippet below.
 
-* No additional code is necessary to view this project.   
+```CREATE DATABASE `benjamin_russell` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE TABLE `clients` (
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `ClientName` varchar(255) DEFAULT NULL,
+  `StylistId` int DEFAULT '0',
+  `Appointment` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Specialty` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;```
+
+* Then you will have the database correctly set up and you can start the project in a separate terminal that the one running mysql by running dotnet run.
 
 ## Specifications
 
@@ -29,7 +47,7 @@ _This application will help a salon owner keep track of all the stylists who wor
 | -------- | ----- | ------ |
 | 1. The salon owner will be able to see a list of stylists |  | List of all stylists |
 | 2. Allow owner to select a stylist, see their details and a list of clients associated with that stylist |  | Anna's details and clients |
-| 3. Allow owner to add new stylists to system as they are hired | Lisa hired on 7/31/2020 | Lisa's details and clients |
+| 3. Allow owner to add new stylists to system as they are hired | Name: Lisa Specialty: Coloring  | Lisa's details and clients |
 | 4. Add clients to a specific stylist, should not be able to add a client if no stylists have been added | Anna's client list |  |
 
 
