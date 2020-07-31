@@ -1,0 +1,15 @@
+.container {
+  margin-top: 5%;
+}
+
+.jumbotron {
+  background-color: rgba(245, 245, 245, 0.74);
+  border: solid 1px #343a40;
+  border-radius: 10px;
+}
+
+body {
+  background-image: url(https://lalascoop.files.wordpress.com/2018/09/2pxpeg9w.jpeg?w=605&h=403);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
