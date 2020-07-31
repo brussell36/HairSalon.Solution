@@ -24,7 +24,11 @@ _This application will help a salon owner keep track of all the stylists who wor
 * Once you have it installed open your terminal and run mysql -uroot -pepicodus. This will start the mysql server on your computer. 
 * With mysql running in your terminal copy/paste the code snippet below.
 
-```CREATE DATABASE `benjamin_russell` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+```DROP DATABASE IF EXISTS `benjamin_russell`;
+CREATE DATABASE `benjamin_russell`;
+
+USE DATABASE `benjamin_russell`;
+
 CREATE TABLE `clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `ClientName` varchar(255) DEFAULT NULL,
