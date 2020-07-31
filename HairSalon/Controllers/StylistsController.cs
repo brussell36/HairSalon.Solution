@@ -24,5 +24,26 @@ namespace HairSalon.Controllers
     {
       return View();
     }
+    
+    [HttpPost]
+    public ActionResult Create(Stylist stylist)
+    {
+      foreach(Stylist style in _db.Stylists)
+      {
+        if(style.Name == stylist.Name)
+        {
+          return RedirectToAction("Index");
+        }
+      }
+      _db.Stylists.Add(stylist);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Details(int id)
+    {
+      Stylist thisStylist = _db.Stylists.Include(stylist => stylist.Clients).FirstOrDefault(stylists => stylists.StylistId == id);
+      return View(thisStylist);
+    }
   }
 }
