@@ -11,11 +11,11 @@ _This application will help a salon owner keep track of all the stylists who wor
 
 ## Setup/Installation Requirements
 
-1. Clone this repository from GitHub https://github.com/brussell36/HairSalon.Solution
-2. Open the downloaded directory in a text editor of your choice. (VSCode, Atom, etc.)
-3. Install [.Net Core](https://dotnet.microsoft.com/download/dotnet-core/2.2) 
-4. To install the REPL dotnet script, run dotnet tool install -g dotnet-script in your terminal.
-5. Run the program with the command dotnet build.
+* Clone this repository from GitHub https://github.com/brussell36/HairSalon.Solution
+* Open the downloaded directory in a text editor of your choice. (VSCode, Atom, etc.)
+* Install [.Net Core](https://dotnet.microsoft.com/download/dotnet-core/2.2) 
+* To install the REPL dotnet script, run dotnet tool install -g dotnet-script in your terminal.
+* Run the program with the command dotnet build.
 
 #### Additional Setup/Installation Notes:
 
@@ -26,7 +26,7 @@ _This application will help a salon owner keep track of all the stylists who wor
 ## Specifications
 
 | Behavior | Input | Output |
-| -------- | ----- | ------ | -------- |
+| -------- | ----- | ------ |
 | 1. The salon owner will be able to see a list of stylists |  | List of all stylists |
 | 2. Allow owner to select a stylist, see their details and a list of clients associated with that stylist |  | Anna's details and clients |
 | 3. Allow owner to add new stylists to system as they are hired | Lisa hired on 7/31/2020 | Lisa's details and clients |
